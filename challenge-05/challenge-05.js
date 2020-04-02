@@ -2,7 +2,7 @@
 Crie uma variável qualquer, que receba um array com alguns valores aleatórios
 - ao menos 5 - (fica por sua conta os valores do array).
 */
-// ?
+// ?Var array = [1, "ola", true, 4, 6]
 
 /*
 Crie uma função que receba um array como parâmetro, e retorne esse array.
@@ -12,7 +12,16 @@ Crie uma função que receba um array como parâmetro, e retorne esse array.
 /*
 Imprima o segundo índice do array retornado pela função criada acima.
 */
-// ?
+// ?let array = [1, "ola", true, 4, 6]
+
+
+function returnArray(arr) {
+    return arr;
+}
+
+
+console.log(returnArray(array));
+
 
 /*
 Crie uma função que receba dois parâmetros: o primeiro, um array de valores; e o
@@ -20,18 +29,31 @@ segundo, um número. A função deve retornar o valor de um índice do array que
 no primeiro parâmetro. O índice usado para retornar o valor, deve ser o número passado no
 segundo parâmetro.
 */
-// ?
+// ?let array = [1, "ola", true, 4, 6]
+
+
+function returnArray(arr, indice) {
+    return arr[indice];
+}
+
+
+console.log(returnArray(array, 1));
 
 /*
 Declare uma variável que recebe um array com 5 valores, de tipos diferentes.
 */
-// ?
+// var arr = [1, "string", true, undefinid, null]
 
 /*
 Invoque a função criada acima, fazendo-a retornar todos os valores do último
 array criado.
 */
-// ?
+// let array = [1, "ola", true, 4, 6]
+
+
+function returnArray(arr) {
+    return arr;
+}
 
 /*
 Crie uma função chamada `book`, que recebe um parâmetro, que será o nome do
@@ -48,12 +70,51 @@ propriedades:
 os livros.
 */
 // ?
+function book(nomeLivro) {
+    let obj = {
+        Livro1: {
+            qtdPaginas: 100,
+            autor: "Paulo Coelho",
+            Editora: "Teste"
+        },
+        Livro2: {
+            qtdPaginas: 200,
+            autor: "Paulo Coelho2",
+            Editora: "Teste2"
+        },
+        Livro3: {
+            qtdPaginas: 300,
+            autor: "Paulo Coelho3",
+            Editora: "Teste3"
+        }
+    }
+    return obj[nomeLivro];
+}
 
 /*
 Usando a função criada acima, imprima o objeto com todos os livros.
 */
 // ?
-
+function book() {
+    let obj = {
+        Livro1: {
+            qtdPaginas: 100,
+            autor: "Paulo Coelho",
+            Editora: "Teste"
+        },
+        Livro2: {
+            qtdPaginas: 200,
+            autor: "Paulo Coelho2",
+            Editora: "Teste2"
+        },
+        Livro3: {
+            qtdPaginas: 300,
+            autor: "Paulo Coelho3",
+            Editora: "Teste3"
+        }
+    }
+    return obj;
+}
 /*
 Ainda com a função acima, imprima a quantidade de páginas de um livro qualquer,
 usando a frase:
@@ -67,10 +128,51 @@ a frase:
 "O autor do livro [NOME_DO_LIVRO] é [AUTOR]."
 */
 // ?
+function book(nomeLivro) {
+    let obj = {
+        Livro1: {
+            qtdPaginas: 100,
+            autor: "Paulo Coelho",
+            Editora: "Teste"
+        },
+        Livro2: {
+            qtdPaginas: 200,
+            autor: "Paulo Coelho2",
+            Editora: "Teste2"
+        },
+        Livro3: {
+            qtdPaginas: 300,
+            autor: "Paulo Coelho3",
+            Editora: "Teste3"
+        }
+    }
+    return "O autor do livro " + nomeLivro + " tem " + obj[nomeLivro].qtdPaginas + " páginas";
+}
+
 
 /*
 Ainda com a função acima, imprima o nome da editora de um livro qualquer, usando
 a frase:
 "O livro [NOME_DO_LIVRO] foi publicado pela editora [NOME_DA_EDITORA]."
 */
+function book(nomeLivro) {
+    let obj = {
+        Livro1: {
+            qtdPaginas: 100,
+            autor: "Paulo Coelho",
+            Editora: "Teste"
+        },
+        Livro2: {
+            qtdPaginas: 200,
+            autor: "Paulo Coelho2",
+            Editora: "Teste2"
+        },
+        Livro3: {
+            qtdPaginas: 300,
+            autor: "Paulo Coelho3",
+            Editora: "Teste3"
+        }
+    }
+    return "O autor do livro " + nomeLivro + " tem " + obj[nomeLivro].qtdPaginas + " páginas" + "e foi publicado pela editora " + obj[nomeLivro].Editora;
+}
 // ?
