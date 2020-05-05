@@ -1,3 +1,5 @@
+
+(function(){
 // Envolva todo o código desse arquivo em uma IIFE (incluindo esse comentário).
 
 /*
@@ -7,14 +9,25 @@ loop, mostre no console a mensagem:
 'Entrou ao menos uma vez!'
 Qual loop você deve usar para que essa mensagem seja mostrada no console?
 */
-// ?
+// ?do {
+  console.log("Entrou ao menos uma vez!");
+} while (once);
+{
+  console.log("Entrou ao menos uma vez!");
+}
+
 
 /*
 Crie um objeto chamado `person`, que receba as seguintes propriedades:
 - 'name', 'age', 'weight' e 'birthday'. Preencha com os valores corretos
 para o nome, idade, peso e data de nascimento dessa pessoa.
 */
-// ?
+var person = {
+  name: "Veronica",
+  age: 30,
+  weight: 65,
+  birthday: "05/06/89",
+};
 
 /*
 Use um loop para percorrer o objeto criado acima, mostrando no console
@@ -25,8 +38,10 @@ esse objeto tem.
 Após o loop, mostre a frase:
 'The person has [COUNTER] properties'
 */
-// ?
-
+for (const propriedade in person) {
+  console.log("The " + propriedade + "person is " + person[propriedade]);
+}
+console.log("The person has " + counter + " properties");
 /*
 Crie uma função chamada `moreThan`, que vai verificar se a pessoa (objeto
 criado acima) é mais velha que a idade passada por parâmetro.
@@ -34,7 +49,16 @@ Se verdadeiro, retornar `true`. Senão, retornar false.
 Após a função, mostrar a mensagem no console:
 'The person has more than 25 years old? [TRUE/FALSE]'
 */
-// ?
+function moreThan(age) {
+  if (person.age > age) {
+    return true;
+  }
+  return false;
+}
+
+var idade = 25;
+console.log(moreThan(idade));
+console.log("The person has more than" + idade + "years old?" + moreThan(25));
 
 /*
 Faça um loop de 0 a 20, que adicione cada número como um item de um
@@ -43,6 +67,15 @@ Mostre no console os números no array.
 */
 console.log( 'De 0 a 10:' );
 // ?
+var number = [];
+for (let index = 0; index < 20; index++) {
+  const element = index;
+  if (index > 10) {
+    break;
+  }
+  console.log(number.push(element));
+  console.log(number);
+}
 
 /*
 Faça outro loop de 0 a 20, que adicione a um array chamado `numbers` (já
@@ -52,3 +85,14 @@ Mostrar no console os números do array.
 */
 console.log( 'Pares de 0 a 20:' );
 // ?
+  var number = [];
+for (let index = 0; index <= 20; index++) {
+  const element = index;
+  if (index % 2 === 0) {
+    continue;
+  }
+  console.log(number.push(element));
+  console.log(number);
+}
+
+  })();
